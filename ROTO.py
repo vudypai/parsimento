@@ -1,4 +1,3 @@
-from main import *
 
 def octave_rule(degrees):
     figures = [0] * len(degrees)
@@ -19,30 +18,11 @@ def octave_rule(degrees):
             else:
                 figures[i] = "5/3"
 
-        if degrees[i] == 5:
-            if degrees[i + 1] == 5 and degrees[i + 2] == 5: # compound cadence
-                figures[i] = "5/3"
-                figures[i+1] = "6/4"
-                figures[i+2] = "5/4"
-                figures[i+3] = "5/3"
-                i += 3
-
-            if degrees[i + 1] == 5: # double cadence
-                figures[i] = "6/4"
-                figures[i+1] = "5/3"
-                i += 1
-
-            else:
-                figures[i] = "5/3"
-
-
-        if degrees[i] == 1:
+        if degrees[i] == 1 or degrees[i] == 5:
             figures[i] = "5/3"
         if degrees[i] == 2:
             figures[i] = "6/4/3"
-        if degrees[i] == 3:
-            figures[i] = "6/3"
-        if degrees[i] == 7:
+        if degrees[i] == 3 or degrees[i] == 7:
             figures[i] = "6/3"
 
     return figures
