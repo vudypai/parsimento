@@ -14,9 +14,11 @@ s = """
   c 2 d 2 g, 1}
 """
 
-matches = re.findall(r"\b(?<!\\key )([a-g])(is|es)*(?:'|,)*(?:\s|$)", s)
-notes = [
+
+def get_notes(s):
+    matches = re.findall(r"\b(?<!\\key )([a-g])(is|es)*(?:'|,)*(?:\s|$)", s)
+    notes = [
     letter.upper() + alter.replace("es", "b").replace("is", "#")
-    for (letter, alter) in matches
-]
-print(notes)
+    for (letter, alter) in matches]
+    return notes
+
