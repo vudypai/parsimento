@@ -93,6 +93,8 @@ def function_1(basso, mut_dict):
 
 def determine_degrees(basso):
     mut_dict = create_mut_dict(basso)
+    print(mut_dict)
+    print("\n")
     for _ in range(3):
         degrees = function_1(basso, mut_dict)
         for i in range(len(degrees)):
@@ -101,23 +103,13 @@ def determine_degrees(basso):
                     mut_dict[i] = generate_major_scale(basso[i][0])[2]  # keynote at index is m6 down
                 if degrees[i+1] == 7:
                     mut_dict[i] = generate_major_scale(basso[i][0])[4]  # keynote at index is P4 down
+            print(mut_dict)
+            print("\n")
 
     return degrees
 
 # Tests
-tp = ["C", "F", "E", "D",
-      "C", "E", "F", "G",
-      "C", "B", "C", "C",
-      "F#", "G", "C", "D",
-      "G", "G", "E", "F#",
-      "B", "B", "G", "A",
-      "D", "Fn", "E", "D",
-      "C", "A", "D", "E",
-      "A", "A", "F#", "G",
-      "C", "D", "G", "Bb",
-      "A", "Fn", "G", "A",
-      "D", "Bn", "C", "E",
-      "F", "G", "C"
-      ]
-tp2 = ["G", "B", "C", "B", "A", "G", "D", "D", "G", "B", "C", "A", "B", "G", "A", "F", "G", "C#", "D", "A", "F", "D", "C#", "D", "G", "G", "A", "A", "D", "F", "G", "E", "F", "D", "E", "C#", "D", "Fn", "E", "D", "C", "A", "D", "E", "A", "A", "Fn", "G", "C", "F#", "G", "F", "G", "B", "C", "B", "A", "G", "D", "D", "G", "B", "D", "G", "E", "C", "D", "E", "B", "C", "C#", "D"]
+tp = ["C", "D", "E", "F", "G", "A", "B", "C"]
 
+result = determine_degrees(tp)
+print(result)

@@ -1,0 +1,1 @@
+bass = { \clef bass c d e f g a b c c b a g f e d c }continuo = \figuremode {<5 3>4 <6 4 3>4 <6 3>4 <6 5 3>4 <5 3>4 <6 4 2>4 <5 3>4 <5 3>4 <#6 5 3>4 <5 3>4 <#6 5 3>4 <5 3>4 <6 4 2>4 <6 3>4 <6 4 3>4 <5 3>4 } \score { << \new Staff = bassStaff \bass \context Staff = bassStaff \continuo >> } 
