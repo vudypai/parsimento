@@ -121,5 +121,3 @@ tp = ["C", "F", "E", "D",
       ]
 tp2 = ["G", "B", "C", "B", "A", "G", "D", "D", "G", "B", "C", "A", "B", "G", "A", "F", "G", "C#", "D", "A", "F", "D", "C#", "D", "G", "G", "A", "A", "D", "F", "G", "E", "F", "D", "E", "C#", "D", "Fn", "E", "D", "C", "A", "D", "E", "A", "A", "Fn", "G", "C", "F#", "G", "F", "G", "B", "C", "B", "A", "G", "D", "D", "G", "B", "D", "G", "E", "C", "D", "E", "B", "C", "C#", "D"]
 
-result = determine_degrees(tp2)
-print(result)
